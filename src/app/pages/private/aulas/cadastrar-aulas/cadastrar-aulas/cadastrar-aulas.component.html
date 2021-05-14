@@ -1,0 +1,29 @@
+<p>cadastrar-aulas works!</p>
+<form action="">
+
+    <div formGroupName="aulas">
+        <div class="form-group col-md-6">
+
+            <label for="idProfessor">Professor</label>
+            <select class="form-control" formControlName="idProfessor" id="idProfessor">
+                <option *ngFor="let prof of professores" [value]="prof.id">{{prof.nome}} </option>
+
+            </select>
+
+            <label for="nomeAula">Aula</label>
+            <input type="text" class="form-control" formControlName="nomeAula" id="nomeAula">
+
+
+            <label for="duracao">Duração Curso</label>
+            <input type="number" class="form-control" id="duracao" formControlName="duracao">
+
+            <label for="idCurso">id Curso</label>
+            <input type="number" class="form-control" id="idCurso" formControlName="idCurso">
+
+            <label for="topicos">Topicos</label>
+            <input type="text" class="form-control" id="topicos" formControlName="topicos">
+
+        </div>
+        <button type="submit" class="btn btn-primary">salvar</button>
+    </div>
+</form>

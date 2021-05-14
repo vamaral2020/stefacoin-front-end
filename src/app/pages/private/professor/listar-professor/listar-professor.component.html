@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Excluir</th>
+                    <th>Editar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let prof of professores">
+                    <td>
+                        {{ prof.id }}
+                    </td>
+                    <td>
+                        {{ prof.nome }}
+                    </td>
+                    <td>
+                        {{ prof.email }}
+                    </td>
+                    <td>
+                        <button class="btn btn-danger" (click)="excluir(prof.id)">
+                            Excluir
+                        </button>
+                    </td>
+                    <td>
+                        <button class="btn btn-primary" (click)="editar(prof.id)">
+                            Editar
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn btn-primary" (click)="irCadastro()">Novo</button>
+    </div>
+</div>

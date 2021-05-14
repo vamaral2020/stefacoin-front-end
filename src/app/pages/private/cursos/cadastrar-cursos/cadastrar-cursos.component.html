@@ -1,0 +1,18 @@
+<form class="form-horizontal" [formGroup]="cadastroForm" (ngSubmit)="cadastrarCurso()">
+
+    <div class="form-group col-md-6">
+        <label for="nome">Nome Curso</label>
+        <input type="text" class="form-control" formControlName="nome" id="nome">
+
+        <label for="descricao">Descrição</label>
+        <textarea type="text-Area" class="form-control" formControlName="descricao" id="descricao"></textarea>
+
+        <label for="idProfessor">Professor</label>
+        <select class="form-control" formControlName="idProfessor" id="idProfessor">
+            <option *ngFor="let prof of professores" [value]="prof.id">{{prof.nome}} </option>
+
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">salvar</button>
+</form>
